@@ -1,0 +1,2 @@
+CREATE TABLE transitions_article_ids(id INT PRIMARY KEY)
+INSERT transitions_article_ids select  *  from (select distinct prev_id from clickstream_derived_internal_links union select distinct curr_id from clickstream_derived_internal_links) as tmp
